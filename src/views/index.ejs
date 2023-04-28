@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Data Store</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./../public/stylesheets/style.css">
+</head>
+
+<body class="">
+  <div class="container mt-5 ">
+    <% if (messages.success) { %>
+      <p class="alert alert-success mb-3"><%- messages.success %></p>
+      <% } %>
+      <h1>Enter The Data </h1>
+        <form action="user_form" method="POST">
+          <div class="mb-2">
+            POWER STATION: <input type="text" id="name" placeholder="POWER STATION" name="PS" />
+          </div>
+          <div class="mb-2">
+            CAPACITY: <input type="text" id="name" placeholder="CAPACITY" name="CAP" />
+          </div>
+          <div class="mb-2">
+            MAXIMUM LOAD(MW): <input type="text" id="name" placeholder="MAXIMUM LOAD(MW)" name="ML" />
+          </div>
+          <!-- <div class="mb-2">
+            GEN(MUS): <input type="text" id="name" placeholder="CAP" name="GEN" />
+          </div> -->
+          <div class="mb-2">
+            AUX CONS(MUS): <input type="text" id="name" placeholder="AUX CONS(MUS)" name="ACM" />
+          </div>
+          <div class="mb-2">
+            AUX CONS(%): <input type="text" id="name" placeholder="AUX CONS(%)" name="ACP" />
+          </div>
+          <div class="mb-2">
+            GTLOSS(MUS): <input type="text" id="name" placeholder="GTLOSS(MUS)" name="GM" />
+          </div>
+          <div class="mb-2">
+            GTLOSS(%): <input type="text" id="name" placeholder="GTLOSS(%)" name="GP" />
+          </div>
+          <!-- <div class="mb-2">
+            TOTAL AUX CONS(MUS):	 <input type="text" id="name" placeholder="CAP" name="TACM" />
+          </div> -->
+          <div class="mb-2">
+            TOTAL AUX CONS(%): <input type="text" id="name" placeholder="TOTAL AUX CONS(%)" name="TACP" />
+          </div>
+          <div class="mb-2">
+            UNIT SENT OUT(MUS): <input type="text" id="name" placeholder="UNIT SENT OUT(MUS)" name="USOM" />
+          </div>
+          <div class="mb-2">
+            PLF: <input type="text" id="name" placeholder="PLF" name="PLF" />
+          </div>
+          <div class="mb-2">
+            COAL CONS(MT): <input type="text" id="name" placeholder="COAL CONS(MT)" name="CCM" />
+          </div>
+          <div class="mb-2">
+            COAL CV(AS FIRED): <input type="text" id="name" placeholder="COAL CV(AS FIRED)" name="CCA" />
+          </div>
+          <div class="mb-2">
+            RFO/LSHS CONS: <input type="text" id="name" placeholder="RFO/LSHS CONS" name="RCO" />
+          </div>
+          <div class="mb-2">
+            RFO/LSHS CV: <input type="text" id="name" placeholder="RFO/LSHS CV" name="RCV" />
+          </div>
+          <div class="mb-2">
+            CAP(MAX): <input type="text" id="name" placeholder="CAP(MAX)" name="LC" />
+          </div>
+          <div class="mb-2">
+            LDO CV:
+            <input type="text" id="name" placeholder="LDO CV" name="CC" />
+          </div>
+          <div class="mb-2">
+            COAL CV(AR-100): <input type="text" id="name" placeholder="COAL CV(AR-100)" name="GEN" />
+          </div>
+          <!-- <div class="mb-2">
+            CAP(MAX): <input type="text" id="name" placeholder="CAP" name="CAP" />
+          </div>
+          <div class="mb-2">
+            MAX LOAD:
+            <input type="text" id="name" placeholder="MAXLOAD" name="MAXLOAD" />
+          </div>
+          <div class="mb-2">
+            GEN: <input type="text" id="name" placeholder="GEN" name="GEN" />
+          </div> -->
+          <div class="button1">
+            <button type="submit" class="btn btn-dark">Store</button>
+          </div>
+
+          <br>
+        </form>
+        <a href="/data" class="btn btn-dark">Data Table</a>
+        <div>
+        
+        <br>
+        <a href="/export/export" class="btn btn-success btn-sm">Download Excel sheet</a>
+        <div>
+          <br>
+          <form method="POST" action="/logout">
+              <button type="submit" class="btn btn-primary">Log out</button>
+          </form>
+      </div>
+  </div>
+
+  </div>
+</body>
+
+</html>
